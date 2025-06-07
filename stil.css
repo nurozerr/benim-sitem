@@ -1,0 +1,193 @@
+/* Genel Ayarlar ve Fontlar */
+body {
+    font-family: 'Montserrat', sans-serif; /* Ana font */
+    margin: 0;
+    padding: 0;
+    color: #333;
+    background-color: #f4f7f6; /* Hafif gri-beyaz arka plan */
+    line-height: 1.6;
+    overflow-x: hidden; /* Yatay scroll bar'ı engelle */
+}
+
+.arkaplan-deseni {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, #a8edea 0%, #fed6e3 100%);
+    opacity: 0.6;
+    z-index: -1;
+}
+
+.container {
+    max-width: 960px;
+    margin: 40px auto;
+    padding: 30px;
+    background-color: rgba(255, 255, 255, 0.95);
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+    position: relative;
+    z-index: 1;
+}
+
+/* Başlık Alanı */
+header {
+    text-align: center;
+    padding-bottom: 30px;
+    margin-bottom: 30px;
+    border-bottom: 2px dashed #ffb6c1;
+}
+
+.site-basligi {
+    font-family: 'Pacifico', cursive;
+    font-size: 4em;
+    color: #69c6ff;
+    margin: 0 0 10px 0;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
+}
+
+.alt-baslik {
+    font-size: 1.3em;
+    color: #555;
+    font-weight: 300;
+}
+
+/* Bölüm Başlıkları */
+.bolum h2 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 2.2em;
+    color: #e91e6282;
+    text-align: center;
+    margin-bottom: 30px;
+    font-weight: 700;
+    position: relative;
+    padding-bottom: 10px;
+}
+
+.bolum h2 span {
+    font-size: 0.8em; /* Sembol boyutunu biraz küçültebiliriz veya aynı bırakabiliriz */
+    vertical-align: middle;
+    color: #e91e627a; /* Başlık rengiyle aynı veya biraz daha açık/koyu olabilir */
+    margin: 0 10px; /* Semboller ve yazı arasında boşluk */
+}
+
+/* Kartlar Bölümü */
+.kart-konteyner {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 25px;
+    justify-content: center;
+}
+
+.kart {
+    background: #fff;
+    border: 1px solid #f0f0f0;
+    border-radius: 10px;
+    padding: 25px;
+    width: calc(50% - 40px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-align: center;
+}
+
+.kart:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.12);
+}
+
+.kart-ikon {
+    font-size: 2.5em; /* Boyut aynı kalabilir */
+    margin-bottom: 15px;
+    color: #ab6cc04f; /* Daha yumuşak bir gül kurusu / şarap rengi gibi */
+    /* Eski renk: #ff69b4; (Canlı pembe) */
+}
+
+.kart h3 {
+    font-size: 1.5em;
+    color: #333;
+    margin-top: 0;
+    margin-bottom: 10px;
+    font-weight: 700;
+}
+
+.kart p {
+    font-size: 0.95em;
+    color: #666666;
+}
+
+/* Mesaj Kutusu */
+#mesajim {
+    margin-top: 40px;
+}
+
+.mesaj-kutusu {
+    background-color: #fff9f0;
+    padding: 30px;
+    border-radius: 10px;
+    border-left: 6px solid #ff8c69;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    text-align: left;
+}
+
+.mesaj-kutusu p {
+    font-size: 1.1em;
+    color: #444;
+    margin-bottom: 15px;
+}
+
+.mesaj-kutusu p:last-child {
+    margin-bottom: 0;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    margin-top: 40px;
+    padding-top: 20px;
+    border-top: 1px solid #eee;
+    font-size: 0.9em;
+    color: #777;
+}
+
+/* Küçük Ekranlar İçin Ayarlamalar (Responsive Tasarım) */
+@media (max-width: 768px) {
+    .container {
+        margin: 20px auto;
+        padding: 20px;
+    }
+
+    .site-basligi {
+        font-size: 3em;
+    }
+
+    .alt-baslik {
+        font-size: 1.1em;
+    }
+
+    .bolum h2 {
+        font-size: 1.8em;
+    }
+    .bolum h2 span {
+        margin: 0 5px; /* Küçük ekranlarda sembol boşluğunu azalt */
+    }
+
+    .kart {
+        width: calc(100% - 40px);
+    }
+}
+
+@media (max-width: 480px) {
+    .site-basligi {
+        font-size: 2.5em;
+    }
+    .kart h3 {
+        font-size: 1.3em;
+    }
+    .kart p {
+        font-size: 0.9em;
+    }
+    .mesaj-kutusu p {
+        font-size: 1em;
+    }
+}
